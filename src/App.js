@@ -7,7 +7,10 @@ import Login from "./Views/Authentication/Login/Login";
 import Profile from "./Views/Profile/Profile";
 import ProtectionLogin from "./Components/ProtectionRoutes/ProtectionLogin";
 import Protection from "./Components/ProtectionRoutes/ProtectionRoutes";
-import Bottomnavbar from "./Components/Bottomnavbar";
+import Bottomnavbar from "./Components/Bottomnavbar"
+import WhyRigthMarket from "./Components/SideBarItems/why";
+import AboutRigthMarket from "./Components/SideBarItems/about";
+import Terms from "./Components/SideBarItems/Terms";
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
   <Route path="/" element={<Homepage/>} />
   <Route path="/Detail/:title" element={<Detailpage/>}/>
   <Route path="/Favorites" element={<WishList/>} />
-  
+  <Route path="/WhyRigthMarket" element={<WhyRigthMarket/>} />
+  <Route path="/AboutRigthMarket" element={<AboutRigthMarket/>} />
+  <Route path="/Terms" element={<Terms/>} />
+
   <Route element={<Protection redirectPath="/Login" />}>
   <Route path="/Cart" element={<Cart/>} />
   <Route path="/Profile" element={<Profile/>} />

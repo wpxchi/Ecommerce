@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from 'react-router-dom';
 
 function SideBar({ show, handleClose, handleShow }) {
   return (
@@ -17,9 +18,20 @@ function SideBar({ show, handleClose, handleShow }) {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className="space-y-3">
+            <Link to={'/AboutRigthMarket'}>
             <li className="text-xl font-semibold">About Right Market</li>
+            </Link>
+
+            <Link to={'/"/Terms"'}>
             <li className="text-xl font-semibold">Privacy Policies and Terms of Use</li>
-            <li className="text-xl font-semibold">Why Use Right Market?</li>
+ </Link>
+
+ <Link to={'/WhyRigthMarket'}>
+ <li className="text-xl font-semibold">Why Use Right Market?</li>
+ </Link>
+
+            
+           
           </ul>
         </Offcanvas.Body>
       </Offcanvas>
